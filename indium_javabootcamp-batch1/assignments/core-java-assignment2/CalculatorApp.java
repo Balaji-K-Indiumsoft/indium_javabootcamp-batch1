@@ -41,7 +41,7 @@ public class CalculatorApp {
                 }
                 break;
             default:
-                System.out.println("Error: Invalid operator.");
+                System.err.println("Error: Invalid operator.");
                 break;
         }
 

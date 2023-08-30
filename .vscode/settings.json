@@ -1,9 +1,9 @@
 {
     "java.project.sourcePaths": [
         "indium_javabootcamp-batch1/labs/corejava/hello-world-labs",
-        "indium_javabootcamp-batch1/labs/corejava/core-java-assignments",
         "indium_javabootcamp-batch1/labs/corejava/First-javaProgram/firstproject/src/main/java/com/example/java",
-        "indium_javabootcamp-batch1/labs/core-java-labs/src"
+        "indium_javabootcamp-batch1/labs/core-java-labs/src",
+        "indium_javabootcamp-batch1/assignments/core-java-assignment1"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
