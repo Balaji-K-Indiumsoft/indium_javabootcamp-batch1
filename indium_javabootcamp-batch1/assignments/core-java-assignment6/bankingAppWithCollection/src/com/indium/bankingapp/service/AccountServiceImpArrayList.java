@@ -3,25 +3,25 @@ package com.indium.bankingapp.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.indium.bankingapp.model.BankAccount;
+import com.indium.bankingapp.model.Account;
 
 
 
-public class BankingServiceImpl implements BankingService {
+public class AccountServiceImpArrayList implements AccountService {
 
 	// Array List
-	private List<BankAccount> accounts = new ArrayList();
+	private List<Account> accounts = new ArrayList();
 
 	// Add Account
 	@Override
-	public void addAccount(BankAccount account) {
+	public void addAccount(Account account) {
 		accounts.add(account);
 	}
 
 	// get one account
 	@Override
-	public BankAccount getAccount(String accountNumber) {
-		for (BankAccount account : accounts) {
+	public Account getAccount(String accountNumber) {
+		for (Account account : accounts) {
 			if (account.getAccountNumber().equals(accountNumber)) {
 				return account;
 			}
@@ -31,7 +31,7 @@ public class BankingServiceImpl implements BankingService {
 
 	// get all accounts
 	@Override
-	public List<BankAccount> getAllAccounts() {
+	public List<Account> getAllAccounts() {
 
 		return accounts;
 	}
@@ -40,7 +40,7 @@ public class BankingServiceImpl implements BankingService {
 	@Override
 	public void updateAccount(String accountNumber, String newAccountHolderName) {
 
-		for (BankAccount account : accounts) {
+		for (Account account : accounts) {
 			if (account.getAccountNumber().equals(accountNumber)) {
 				account.setAccountHolderName(newAccountHolderName);
 				return;
@@ -52,7 +52,7 @@ public class BankingServiceImpl implements BankingService {
 	// deposit
 	@Override
 	public void deposit(String accountNumber, double amount) {
-		BankAccount account = getAccount(accountNumber);
+		Account account = getAccount(accountNumber);
 		if (account != null && amount > 0) {
 			account.deposit(amount);
 		}
@@ -61,7 +61,7 @@ public class BankingServiceImpl implements BankingService {
 
 	@Override
 	public void withdraw(String accountNumber, double amount) {
-		BankAccount account = getAccount(accountNumber);
+		Account account = getAccount(accountNumber);
 		if (account != null && amount > 0) {
 			account.withdraw(amount);
 		}
@@ -72,7 +72,7 @@ public class BankingServiceImpl implements BankingService {
 	public void deleteAccount(String accountNumber) {
 
 		for (int i = 0; i < accounts.size(); i++) {
-			BankAccount account = accounts.get(i);
+			Account account = accounts.get(i);
 			if (account.getAccountNumber().equals(accountNumber)) {
 				accounts.remove(i);
 				return;

@@ -3,15 +3,17 @@ package com.indium.bankingapp;
 import java.util.List;
 import java.util.Scanner;
 
-import com.indium.bankingapp.model.BankAccount;
-import com.indium.bankingapp.service.BankingService;
-import com.indium.bankingapp.service.BankingServiceImpl;
-
+import com.indium.bankingapp.model.Account;
+import com.indium.bankingapp.service.AccountService;
+import com.indium.bankingapp.service.AccountServiceImpLinkedList;
+import com.indium.bankingapp.service.AccountServiceImpLinkedList;
 
 
 public class BankingAppMain {
 	
-	private static final BankingService bankingService = new BankingServiceImpl();
+	private static final AccountService bankingService = new AccountServiceImpLinkedList();
+
+//	private static final AccountService bankingService = new AccountServiceImpLinkedList();
 	
 	public static void main(String[] args) {
 	
@@ -69,7 +71,7 @@ public class BankingAppMain {
 		System.out.println("Enter the Account Number: ");
 		String accountNumber =scanner.next();
 		
-		BankAccount account = bankingService.getAccount(accountNumber);
+		Account account = bankingService.getAccount(accountNumber);
 		
 		if(account != null) {
 			System.out.println("Account Details: ");
@@ -85,7 +87,7 @@ public class BankingAppMain {
 		System.out.println("Enter Account Number");
 		
 		String accountNumber = scanner.next();
-		BankAccount account = bankingService.getAccount(accountNumber);
+		Account account = bankingService.getAccount(accountNumber);
 		
 		if(account != null) {
 			System.out.println("Enter withdraw amount: ");
@@ -102,7 +104,7 @@ public class BankingAppMain {
 		
 		String accountNumber = scanner.next();
 		
-		BankAccount account = bankingService.getAccount(accountNumber);
+		Account account = bankingService.getAccount(accountNumber);
 		
 		if(account != null) {
 			System.out.println("Enter deposit amount");
@@ -129,7 +131,7 @@ public class BankingAppMain {
 		System.out.println("Enter Account Number");
 		String accountNumber = scanner.next();
 		
-		BankAccount account = bankingService.getAccount(accountNumber);
+		Account account = bankingService.getAccount(accountNumber);
 		
 		if(account !=null) {
 			System.out.println("Enter new account holder name");
@@ -144,12 +146,12 @@ public class BankingAppMain {
 	}
 
 	private static void viewAllAccounts() {
-		List<BankAccount> allAccount = bankingService.getAllAccounts();
+		List<Account> allAccount = bankingService.getAllAccounts();
 		
 		if(allAccount.isEmpty()) {
 			System.out.println("No account found. ");
 		}else {
-			for(BankAccount account: allAccount) {
+			for(Account account: allAccount) {
 				System.out.println(account);
 			}
 		}
@@ -164,7 +166,7 @@ public class BankingAppMain {
 		System.out.println("Enter Initial Balance: ");
 		double initialBalance = scanner.nextDouble();
 		
-		BankAccount account = new BankAccount(accountNumber, accountHolderName, initialBalance);
+		Account account = new Account(accountNumber, accountHolderName, initialBalance);
 		bankingService.addAccount(account);
 		
 		System.out.println("Account created successfully");

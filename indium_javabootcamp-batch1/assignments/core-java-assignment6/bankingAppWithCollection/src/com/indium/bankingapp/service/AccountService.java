@@ -2,17 +2,17 @@ package com.indium.bankingapp.service;
 
 import java.util.List;
 
-import com.indium.bankingapp.model.BankAccount;
+import com.indium.bankingapp.model.Account;
 
 
 
-public interface BankingService {
+public interface AccountService {
 	
-	void addAccount(BankAccount account);
+	void addAccount(Account account);
 
-	BankAccount getAccount(String accountNumber);
+	Account getAccount(String accountNumber);
 	
-	List<BankAccount> getAllAccounts();
+	List<Account> getAllAccounts();
 	
 	void updateAccount(String accountNumber, String newAccountHolderName);
 	

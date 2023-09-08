@@ -1,13 +1,13 @@
 package com.indium.bankingapp.model;
 
-public class BankAccount {
+public class Account {
 	
 	private String accountNumber;
 	private String accountHolderName;
 	private double balance;
 	
 	
-	public BankAccount(String accountNumber, String accountHolderName, double balance) {
+	public Account(String accountNumber, String accountHolderName, double balance) {
 		super();
 		this.accountNumber = accountNumber;
 		this.accountHolderName = accountHolderName;
