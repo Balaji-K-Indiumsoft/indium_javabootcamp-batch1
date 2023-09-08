@@ -2,19 +2,28 @@ package com.indium.bankingapp;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 import com.indium.bankingapp.model.Account;
 import com.indium.bankingapp.service.AccountService;
-import com.indium.bankingapp.service.AccountServiceImpLinkedList;
-import com.indium.bankingapp.service.AccountServiceImpLinkedList;
+//import com.indium.bankingapp.service.AccountServiceImpHashSet;
+//import com.indium.bankingapp.service.AccountServiceImpTreeMap;
+import com.indium.bankingapp.service.AccountServiceImpArrayList;
+import com.indium.bankingapp.service.AccountServiceImpHashMap;
+import com.indium.bankingapp.service.AccountServiceImpTreeSet;
+
+//import com.indium.bankingapp.service.AccountServiceImpLinkedList;
+//import com.indium.bankingapp.service.AccountServiceImpLinkedList;
 
 
 public class BankingAppMain {
 	
-	private static final AccountService bankingService = new AccountServiceImpLinkedList();
-
+	private static final AccountService bankingService = new AccountServiceImpArrayList();
 //	private static final AccountService bankingService = new AccountServiceImpLinkedList();
-	
+//	private static final AccountService bankingService =new AccountServiceImpHashSet();
+//private static final AccountService bankingService =new AccountServiceImpTreeSet();
+//	private static final AccountService bankingService =new AccountServiceImpTreeMap();
+//private static final AccountService bankingService =new AccountServiceImpHashMap();
 	public static void main(String[] args) {
 	
 		Scanner scanner = new Scanner(System.in);
@@ -145,8 +154,21 @@ public class BankingAppMain {
 		
 	}
 
+//	private static void viewAllAccounts() {
+//		List<Account> allAccount = bankingService.getAllAccounts();
+//
+//		if(allAccount.isEmpty()) {
+//			System.out.println("No account found. ");
+//		}else {
+//			for(Account account: allAccount) {
+//				System.out.println(account);
+//			}
+//		}
+//
+//	}
 	private static void viewAllAccounts() {
 		List<Account> allAccount = bankingService.getAllAccounts();
+//		Set<Account> allAccount = bankingService.getAllAccounts();
 		
 		if(allAccount.isEmpty()) {
 			System.out.println("No account found. ");
