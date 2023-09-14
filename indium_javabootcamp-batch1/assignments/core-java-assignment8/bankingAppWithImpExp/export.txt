@@ -1,0 +1,4 @@
+BankAccount Details
+ Account Number: 101, Account HolderName: balaji, Balance: 1009000.0, Account Type: savings
+BankAccount Details
+ Account Number: 12345, Account HolderName: John Doe, Balance: 1000.0, Account Type: Savings
