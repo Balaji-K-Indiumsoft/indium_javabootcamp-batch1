@@ -18,9 +18,9 @@ S.no   Assignments	                                 Status
 
 9	bankingapp-with-impexp-thread  	                completed
 
-10	bankingapp-with-lamexp-stream-stats	        not yet started
+10	bankingapp-with-lamexp-stream-stats	        completed
 
-11	bankingapp-with-jdbc	                        not yet started
+11	bankingapp-with-jdbc	                        completed
 
 12	bankingapp-with-junit  	                        not yet started
 		
