@@ -1,0 +1,6 @@
+balaji,2300,101,Current
+vijay,230000,102,Savings
+rajesh,1200000,103,Current
+rajesh,250000,104,Savings
+rajesh,25000,105,Current
+dinesh,23000,107,Savings
