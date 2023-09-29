@@ -1,5 +1,5 @@
-S.no   Assignments	                                 Status
-
+S.no   Assignments	                                 Status                                              Project:
+                                                                                                             Capstone (Skill track Application) Completed 
 1	simple-calculator 	                        completed
 
 2	calculator-using-command line          	        completed
@@ -22,5 +22,5 @@ S.no   Assignments	                                 Status
 
 11	bankingapp-with-jdbc	                        completed
 
-12	bankingapp-with-junit  	                        not yet started
+12	bankingapp-with-junit  	                        completed
 		
