@@ -1,7 +1,6 @@
 package com.indium.junit.db;
 
 import com.indium.junit.modal.BankAccount;
-import com.indium.junit.services.BankingService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
